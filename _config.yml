@@ -1,2 +1,3 @@
 pygments: true
+baseurl: /blog
 permalink: /:title
