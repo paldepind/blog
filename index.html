@@ -1,0 +1,22 @@
+---
+layout: default
+title: Simon Friis Vindum's blog
+---
+<article id="posts">
+  <header>
+    <h1>
+      Posts
+    </h1>
+  </header>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{post.url }}">
+          <span>{{ post.date | date_to_string }}</span> {{ post.title }}
+          <div class="border" style="border-right-color: rgb({{ post.color }});
+                                     background: rgba({{ post.color }}, 0.5);" />
+         </a>
+      </li><br>
+    {% endfor %}
+  </ul>
+</article>
