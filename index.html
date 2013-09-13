@@ -11,7 +11,7 @@ title: Simon Friis Vindum's blog
   <ul class="posts">
     {% for post in site.posts %}
       <li>
-        <a href="{{post.url }}">
+        <a href="{{ site.baseurl }}{{post.url }}">
           <span>{{ post.date | date_to_string }}</span> {{ post.title }}
           <div class="border" style="border-right-color: rgb({{ post.color }});
                                      background: rgba({{ post.color }}, 0.5);" />
