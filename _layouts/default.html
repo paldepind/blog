@@ -21,8 +21,7 @@
       {{ content }}
       <aside>
         <h1>
-          {% capture url %}/{{ site.baseurl }}index.html{% endcapture %}
-          {{ site.baseurl }}
+          {% capture url %}{{ site.baseurl }}/index.html{% endcapture %}
           {% if page.url != url %}
             <a href="/{{ site.baseurl }}">
           {% endif %}
