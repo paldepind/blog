@@ -21,7 +21,6 @@
       {{ content }}
       <aside>
         <h1>
-          {% capture url %}{{ site.baseurl }}/index.html{% endcapture %}
           {% if page.url != '/index.html' %}
             <a href="{{ site.baseurl/ }}/">
           {% endif %}
@@ -30,7 +29,6 @@
             </a>
           {% endif %}
         </h1>
-            {{ page.url }} - {{ url }}
         <p>
         I am self-taught programmer located in Aarhus, Denmark and finding joy in learning and creating.
         </p>
