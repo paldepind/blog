@@ -23,14 +23,14 @@
         <h1>
           {% capture url %}{{ site.baseurl }}/index.html{% endcapture %}
           {% if page.url != url %}
-            {{page.url}} - {{url}}
-            <a href="{{ site.baseurl }}/">
+            <a href="{{ site.baseurl/ }}/">
           {% endif %}
           by Simon Friis Vindum
           {% if page.url != '/'site.baseurl'index.html' %}
             </a>
           {% endif %}
         </h1>
+            {{ page.url }} - {{ url }}
         <p>
         Located in Aarhus, Denmark I am self-taught programmer finding joy in learning and creating.
         </p>
