@@ -2,8 +2,8 @@
 layout: default
 ---
 <article id="post">
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<h1 style="border-color: rgb({{ page.color }})">{{ page.title }}</h1>
+<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
 
 <main>
 {{ content }}

@@ -12,10 +12,10 @@ title: Simon Friis Vindum's blog
     {% for post in site.posts %}
       <li>
         <a href="{{ site.baseurl }}{{post.url }}">
-          <span>{{ post.date | date_to_string }}</span> {{ post.title }}
-          <div class="border" style="border-right-color: rgb({{ post.color }});
-                                     background: rgba({{ post.color }}, 0.5);" />
-         </a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> {{ post.title }}
+        </a>
+        <div class="border" style="border-right-color: rgb({{ post.color }});
+                                   background: rgba({{ post.color }}, 0.5);" />
       </li><br>
     {% endfor %}
   </ul>

@@ -7,23 +7,33 @@ html, body {
 body {
   background-color: #FFF;
   font: 1.1em 'Lato', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
 }
 
 h1, h2, h3 {
   font-family: 'Lato', Helvetica, Arial;
-  font-weight: 100;
+  font-weight: 400;
+  margin-bottom: -0.5em;
 }
 
 h1 {
-  margin: .16em 0 0.1em 0;
+  margin: .16em 0 0 0;
+  font-weight: 300;
+  line-height: 1.3;
 }
 
-#posts h1 {
+header > h1 {
   font-size: 5em;
+  margin-top: 0.18em;
 }
 
-#post h1 {
-  font-size: 3em;
+article > h1 {
+  text-align: right;
+  font-size: 3.5em;
+  margin-top: 0.72em;
+  border-right: 3px solid black;
+  margin-right: -16px;
+  padding-right: 16px;
 }
 
 p { margin: 1em 0; }
@@ -59,17 +69,18 @@ ul.posts {
 }
 
 ul.posts li {
-  line-height: 1.75em;
+  line-height: 2;
   position: relative;
   display: inline-block;
   margin-bottom: 2px;
+  z-index: 0;
 }
 
 li > a {
   text-decoration: none;
 }
 
-ul.posts span {
+time {
   color: #777;
   font-weight: 300;
   font-size: 0.8em;
@@ -80,7 +91,7 @@ ul.posts span {
   top: 0px;
   position: absolute;
   right: -0.85em;
-  border-right: 0.2em solid;
+  border-right: 3px solid;
   height: 100%;
   z-index: -1;
   width: 0%;
@@ -99,51 +110,65 @@ li a:hover + .border {
 
 body > article {
   padding: 0 .8em;
+  margin-bottom: 2em;
+}
+
+main {
+  padding: 1em 0 5em 0;
 }
 
 /*****************************************************************************/
 /* Sidebar */
 aside {
-  padding: 0 .8em;
-  min-height: 100%;
+  padding: 0 .8em .8em .8em;
 }
 
 aside > h1 {
   padding: 1.5em 0 0 0;
   margin-bottom: 0em;
+  font-size: 1.25em;
   color: #777;
   font-weight: 300;
-  font-size: 1.25em;
+}
+
+aside h1 a,
+aside h1 a:visited,
+aside h1 a:visited:hover,
+aside h1 a:hover {
+  color: #777;
+  font-weight: 300;
+}
+
+aside a {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /*****************************************************************************/
 /* Posts */
 
 /* standard */
-#post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+.highlight {
+  //padding: .4em;
+}
+
+pre {
+  padding: 1em;
 }
 
 #post ul, #post ol {
   margin-left: 1.35em;
 }
 
-#post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
-
-#post pre code {
-  border: none;
+#post time {
+  display: block;
+  text-align: right;
 }
 
 /* terminal */
 #post pre.terminal {
   border: 1px solid #000;
-  background-color: #333;
+  //background-color: #333;
   color: #FFF;
 }
 
@@ -158,24 +183,25 @@ aside > h1 {
 
 @media screen and (min-width: 780px) {
   body > article {
-    float: left;
-    border-right: 1px solid #cfcfcf;
+    position: absolute;
+    left: 0;
+    right: 13.6em;
     min-height: 100%;
-  }
-
-  #posts {
-    width: 47%;
+    border-right: 1px solid #cfcfcf;
     padding-right: 15px;
   }
 
+  #posts {
+  }
+
   #post {
-    width: 60%;
-    max-width: 45em;
-    padding: 0 1%;
+    //max-width: 40.5em;
+    //padding: 0 1%;
   }
 
   aside {
-    float: left;
+    position: absolute;
+    right: 0;
     width: 12em;
     padding-left: .8em;
   }
@@ -189,12 +215,25 @@ aside > h1 {
   }
 
   aside > h1 {
-    padding-top: 3.5em;
+    padding-top: 3.7em;
   }
 }
 
 @media screen and (min-width: 1000px) {
   body > article {
-    margin-left: 12%;
+    width: 40.5em;
+  }
+  aside {
+    left: 42.3em;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  body > article {
+    left: auto;
+    right: 38.3%;
+  }
+  aside {
+    left: 61.8%;
   }
 }

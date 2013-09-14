@@ -20,22 +20,36 @@
     <body>
       {{ content }}
       <aside>
-        <h1>by Simon Friis Vindum</h1>
+        <h1>
+          {% capture url %}/{{ site.baseurl }}index.html{% endcapture %}
+          {{ site.baseurl }}
+          {% if page.url != url %}
+            <a href="/{{ site.baseurl }}">
+          {% endif %}
+          by Simon Friis Vindum
+          {% if page.url != '/'site.baseurl'index.html' %}
+            </a>
+          {% endif %}
+        </h1>
         <p>
-        This blog belongs to <i>Simon Friis Vindum</i> - on the world wide web also known as <i>paldepind</i>.
+        Located in Aarhus, Denmark I am self-taught programmer finding joy in learning and creating.
         </p>
         <p>
-        I am just another hobby programmer finding joy in learning and crafting.
+        In this blog I will share my thoughts and findings related to software and programming in a hope that that will be of interest to others.
         </p>
         <p>
-        In this blog I will share my thoughts related to software and programming in a hope that that will be of interest to other.
+          Feel free to hit me up at<br />
+          <a href="mailto:simonfv@gmail.com">simonfv@gmail.com</a><br>
         </p>
         <p>
-          Feel free to hit me up at <i>simon@friis.io</i><br>
-          <a href="/">{{ site.name }}</a>
+          I am also on GitHub
+          <a href="http://github.com/paldepind/">github.com/paldepind</a><br>
         </p>
         <p>
-          <a href="http://github.com/paldepind/">github.com/paldepind</a><br />
+          And Twitter
+          <a href="https://twitter.com/paldepind/">twitter.com/paldepind</a><br>
+        </p>
+        <p>
         </p>
       </aside>
     </body>
