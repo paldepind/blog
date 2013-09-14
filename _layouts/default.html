@@ -23,6 +23,7 @@
         <h1>
           {% capture url %}{{ site.baseurl }}/index.html{% endcapture %}
           {% if page.url != url %}
+            {{page.url}} - {{url}}
             <a href="{{ site.baseurl }}/">
           {% endif %}
           by Simon Friis Vindum
