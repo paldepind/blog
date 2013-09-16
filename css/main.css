@@ -149,7 +149,7 @@ aside a {
 
 /* standard */
 .highlight {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 pre {
