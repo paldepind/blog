@@ -1,4 +1,4 @@
 pygments: true
-baseurl: /blog
+baseurl: /
 permalink: /:title
 markdown: redcarpet
