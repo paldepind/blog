@@ -1,4 +1,4 @@
 pygments: true
 baseurl:
-permalink: /:title
+permalink: :title
 markdown: redcarpet
