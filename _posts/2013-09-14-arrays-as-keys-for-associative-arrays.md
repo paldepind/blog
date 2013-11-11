@@ -3,7 +3,7 @@ layout: post
 title:  "Using arrays as keys for associative arrays in JavaScript"
 date:   2013-09-14 13:04:27
 categories: javascript performance
-color: 46,204,113
+color: "46,204,113"
 ---
 
 ## The problem
