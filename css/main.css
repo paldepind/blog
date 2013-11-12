@@ -38,17 +38,19 @@ article > h1 {
 
 p { margin: 1em 0; }
 
-a {
+a, a:visited {
   color: #000;
+  transition: color 0.1s;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
 }
-a:hover {
-  color: #000;
-}
-a:visited {
-  color: #000;
-}
+
+a:hover,
 a:visited:hover {
-  color: #000;
+  color: #777;
+  transition: color 0.1s;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
 }
 
 table {
@@ -61,6 +63,11 @@ table {
 
 #posts {
   text-align: right;
+}
+
+#posts a:hover,
+#posts a:visited:hover {
+  color: #000;
 }
 
 ul.posts {
@@ -144,6 +151,10 @@ aside a {
   text-decoration: none;
 }
 
+.contact-icons i {
+  margin: 0 .75em;
+}
+
 /*****************************************************************************/
 /* Posts */
 
@@ -168,7 +179,6 @@ pre {
 /* terminal */
 #post pre.terminal {
   border: 1px solid #000;
-  //background-color: #333;
   color: #FFF;
 }
 
@@ -189,9 +199,6 @@ pre {
     min-height: 100%;
     border-right: 1px solid #cfcfcf;
     padding-right: 15px;
-  }
-
-  #posts {
   }
 
   #post {
