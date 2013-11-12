@@ -3,7 +3,7 @@ layout: post
 title: "Escaping the AngularJS router"
 date: 2013-11-12 20:00:00
 categories: javascript angularjs
-color: 52,152,219
+color: "52,152,219"
 ---
 
 When developing single-page applications having a client site router is pretty
