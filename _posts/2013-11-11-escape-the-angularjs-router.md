@@ -27,10 +27,12 @@ param on the `route` argument. Like this:
 $routeProvider.when('/foo', { redirectTo: 'bar.html' })
 ```
 
-But instead of a string a function can also be supplied. AngularJS will then call
-it and redirect to its return value. The function will be called with the URL as its
-second argument and my trick is to simply do an old school
+But instead of a string a function can also be supplied. AngularJS will then
+call it and redirect to its return value. The function will be called with the
+URL as its second argument and the trick is to simply do an old school
 `window.location.href` inside this function to do an actual page redirect.
+Here we're also utilizing the fact that if the function doesn't return a
+string, AngularJS will simply skip the redirect part.
 
 ```javascript
 var redirect = function(skip, url) {
