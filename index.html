@@ -1,22 +1,16 @@
----
-layout: default
-title: Simon Friis Vindum's blog
----
-<article id="posts">
-  <header>
-    <h1>
-      Posts
-    </h1>
-  </header>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> {{ post.title }}
-        </a>
-        <div class="border" style="border-right-color: rgb({{ post.color }});
-                                   background: rgba({{ post.color }}, 0.5);" />
-      </li><br>
-    {% endfor %}
-  </ul>
-</article>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simon Friis Vindum</title>
+  </head>
+
+  <body>
+    <h1>Simon Friis Vindum</h1>
+    <p>
+      <a href="https://github.com/paldepind">GitHub</a><br>
+      <a href="https://twitter.com/paldepind">Twitter</a><br>
+      <a href="https://www.facebook.com/simonfriisvindum">Facebook</a><br>
+      <a href="https://dk.linkedin.com/in/paldepind">LinkedIn</a>
+    </p>
+  </body>
+</html>
